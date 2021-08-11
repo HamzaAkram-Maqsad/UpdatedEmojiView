@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottomsheetbck">
+
+
+    <ImageView
+        android:id="@+id/closeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_baseline_close_24"
+        app:layout_constraintBottom_toTopOf="@id/heading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        android:text="How was the lesson ?"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/selectedEmoji"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/closeButton" />
+
+    <ImageView
+        android:id="@+id/selectedEmoji"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/bad_emoji"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/ratingInputLayout"
+        app:layout_constraintStart_toStartOf="@id/heading"
+        app:layout_constraintTop_toBottomOf="@id/heading" />
+
+    <ImageView
+        android:id="@+id/badEmoji"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bad_emoji"
+        app:layout_constraintEnd_toStartOf="@id/averageEmoji"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heading" />
+
+    <ImageView
+        android:id="@+id/averageEmoji"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/average_emoji"
+        app:layout_constraintEnd_toStartOf="@id/goodEmoji"
+        app:layout_constraintStart_toEndOf="@id/badEmoji"
+        app:layout_constraintTop_toTopOf="@id/badEmoji" />
+
+    <ImageView
+        android:id="@+id/goodEmoji"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/good_emoji"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/averageEmoji"
+        app:layout_constraintTop_toTopOf="@id/badEmoji"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/ratingInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/selectButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectedEmoji">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleSelection="false">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipVideoNotLoad"
+                style="@style/CustomChipChoiceStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Video not Loading"
+                android:visibility="gone" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipPoorExplain"
+                style="@style/CustomChipChoiceStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Poor explanation"
+                android:visibility="gone" />
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipHandWriting"
+                style="@style/CustomChipChoiceStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Handwriting"
+                android:visibility="gone" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTeachingSpeed"
+                style="@style/CustomChipChoiceStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teaching speed"
+                android:visibility="gone" />
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipLoadindTime"
+                style="@style/CustomChipChoiceStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loading Time"
+                android:visibility="gone" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipExplain"
+                style="@style/CustomChipChoiceStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Explanation"
+                android:visibility="gone" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipVideoQaulity"
+                style="@style/CustomChipChoiceStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Video Quality"
+                android:visibility="gone" />
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipEnageLecture"
+                style="@style/CustomChipChoiceStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Engaging Lectures"
+                android:visibility="gone" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTeachStyle"
+                style="@style/CustomChipChoiceStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teaching style"
+                android:visibility="gone" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipDiagram"
+                style="@style/CustomChipChoiceStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Diagrams"
+                android:visibility="gone" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipTeachSpeed"
+                style="@style/CustomChipChoiceStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teaching Speed"
+                android:visibility="gone" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipAudio"
+                style="@style/CustomChipChoiceStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Audio"
+                android:visibility="gone" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipSomethingElse"
+                style="@style/CustomChipChoiceStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Something else" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+
+        <EditText
+            android:id="@+id/feedbackEditText"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/white_bck"
+            android:gravity="top"
+            android:hint="Tell us more..."
+            android:paddingStart="16dp"
+            android:paddingTop="8dp"
+            android:textSize="14sp"
+
+            />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/selectButton"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="12dp"
+        android:background="@drawable/rounded"
+        android:text="Select"
+        android:textColor="@android:color/white"
+        app:backgroundTint="#673AB7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ratingInputLayout"
+        app:rippleColor="?attr/colorControlHighlight" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
