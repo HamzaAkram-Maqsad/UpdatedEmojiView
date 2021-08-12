@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">EmojiView</string>
+    <string name="welcomeToMaqsad">Welcome to Maqsad.</string>
+    <string name="maqsadIntro">Maqsad is an educational app that delivers high quality academic lectures.</string>
+    <string name="signUp">Sign Up</string>
+    <string name="signIn">Sign In</string>
 </resources>

@@ -8,11 +8,31 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="musterd">#F2AE1D</color>
-    <color name="blue">#176BE5</color>
-    <color name="otpBoxColor">#F7F7F7</color>
-    <color name="editTextColor">#F9F7F4</color>
-    <color name="hint_Text_Color">#B7B7B7</color>
-    <color name="backgroundColor">#40000000</color>
-    <color name="backgrounScreen">#E5E5E5</color>
+
+    <color name="cardBackground1">#176BE5</color>
+    <color name="cardBackground2">#FFA800</color>
+    <color name="messengerColor">#0084FF</color>
+    <color name="whatsappColor">#00B950</color>
+
+    <color name="colorPrimary">#F2AE1C</color>
+    <color name="backgroundColor">#FBFCFD</color>
+    <color name="backgroundColorWithOpacity">#B3FBFCFD</color>
+    <color name="colorPrimaryWithOpacity">#CCF2AE1C</color>
+    <color name="colorAccentSecondary">#FF000000</color>
+    <color name="colorAccentPrimary">#F6F6F6</color>
+    <color name="colorAccent">#F27781</color>
+    <color name="colorAccentPrimaryWithOpacity">#B3F6F6F6</color>
+    <color name="whiteWithOpacity">#B3FFFFFF</color>
+    <color name="secondaryColor">#F2AE1C</color>
+    <color name="searchLayoutColor">#F0F2FC</color>
+    <color name="secondaryColorVariant">#F2AE1C</color>
+    <color name="primaryTextColor">#F2AE1C</color>
+    <color name="aboutUsTextColor">#5E85BC</color>
+    <color name="secondaryTextColor">#FFFFFF</color>
+    <color name="cardBackgroundColor">#FFFFFFFF</color>
+    <color name="tertiaryTextColor">#000000</color>
+    <color name="tertiaryTextColor_opposite">#F6F6F6</color>
+    <color name="lightColor">#6A6A6A</color>
+    <color name="tertiaryColor">#05046A</color>
+
 </resources>

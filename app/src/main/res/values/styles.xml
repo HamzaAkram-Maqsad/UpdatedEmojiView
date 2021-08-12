@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="secondaryTextRegularSmall" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="secondaryTextBoldSmall" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="secondaryTextRegularLarge" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="secondaryTextBoldLarge" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="secondaryTextRegularMedium" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="secondaryTextBoldMedium" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="primaryTextRegularSmall" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="primaryTextRegularLarge" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="primaryTextRegularMedium" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="primaryTextBoldSmall" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="primaryTextBoldLarge" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="primaryTextBoldMedium" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="tertiaryTextRegularSmall" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/tertiaryTextColor</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="tertiaryTextRegularLarge" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/tertiaryTextColor</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="tertiaryTextRegularMedium" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/tertiaryTextColor</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="tertiaryTextBoldSmall" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/tertiaryTextColor</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="tertiaryTextBoldLarge" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/tertiaryTextColor</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="tertiaryTextBoldMedium" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/tertiaryTextColor</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+
+    <style name="tertiaryTextMediumSmall" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/tertiaryTextColor</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="tertiaryTextMediumLarge" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/tertiaryTextColor</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="tertiaryTextMediumMedium" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/tertiaryTextColor</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="primaryTextMediumSmall" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="primaryTextMediumLarge" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="primaryTextMediumMedium" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="secondaryTextMediumSmall" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="secondaryTextMediumLarge" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+    <style name="secondaryTextMediumMedium" parent="android:Widget.TextView">
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:fontFamily">@font/poppins_medium</item>
+    </style>
+
+</resources>

@@ -4,5 +4,5 @@
     android:radius="@dimen/_9sdp"/>
 
     <solid
-        android:color="@color/otpBoxColor"/>
+        android:color="@color/backgroundColorWithOpacity"/>
 </shape>

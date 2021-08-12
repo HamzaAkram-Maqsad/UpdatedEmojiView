@@ -1,20 +1,18 @@
 package com.example.emojiview
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import android.util.TypedValue
 import android.view.Gravity
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.TranslateAnimation
+import android.widget.Toast
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.children
 import com.example.emojiview.databinding.EmojiViewBinding
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.google.android.material.chip.Chip
 
 
@@ -31,7 +29,7 @@ class ItemListDialogFragment : BottomSheetDialogFragment(), View.OnClickListener
         binding.selectButton.setOnClickListener(this)
         binding.averageEmoji.setOnClickListener(this)
         binding.goodEmoji.setOnClickListener(this)
-        loop()
+
         return binding.root
 
     }
@@ -106,19 +104,6 @@ class ItemListDialogFragment : BottomSheetDialogFragment(), View.OnClickListener
         binding.selectedEmoji.visibility = View.VISIBLE
         binding.heading.gravity = Gravity.START
         binding.ratingInputLayout.visibility = View.VISIBLE
-        binding.ratingInputLayout.alpha = 0f
-        binding.ratingInputLayout.animate()
-            .translationY(binding.ratingInputLayout.height.toFloat())
-            .setDuration(700)
-            .alpha(1.0f)
-            .setListener(object : AnimatorListenerAdapter() {
-                override fun onAnimationEnd(animation: Animator) {
-                    super.onAnimationEnd(animation)
-
-                }
-            })
-
-
         binding.badEmoji.visibility = View.GONE
         binding.averageEmoji.visibility = View.GONE
         binding.goodEmoji.visibility = View.GONE
@@ -128,7 +113,6 @@ class ItemListDialogFragment : BottomSheetDialogFragment(), View.OnClickListener
     private fun changeTopMargin() {
         (binding.selectButton.layoutParams as ConstraintLayout.LayoutParams).apply {
             topMargin = 8.toDp(requireContext())
-
         }
     }
 
@@ -140,32 +124,5 @@ class ItemListDialogFragment : BottomSheetDialogFragment(), View.OnClickListener
     private fun Int.toDp(context: Context): Int = TypedValue.applyDimension(
         TypedValue.COMPLEX_UNIT_DIP, this.toFloat(), context.resources.displayMetrics
     ).toInt()
-
-    private fun loop() {
-
-        for (index in 0 until binding.chipGroup!!.childCount) {
-            val chip: Chip = binding.chipGroup!!.getChildAt(index) as Chip
-
-            // Set the chip checked change listener
-            chip.setOnCheckedChangeListener { view, isChecked ->
-                if (isChecked) {
-                    chip.chipStrokeWidth = 0f
-                } else {
-                    chip.chipStrokeWidth = 2f
-                }
-
-
-            }
-        }
-
-    }
-
-    fun View.slideUp(duration: Int = 500) {
-        visibility = View.VISIBLE
-        val animate = TranslateAnimation(0f, 0f, this.height.toFloat(), 0f)
-        animate.duration = duration.toLong()
-        animate.fillAfter = true
-        this.startAnimation(animate)
-    }
 
 }
