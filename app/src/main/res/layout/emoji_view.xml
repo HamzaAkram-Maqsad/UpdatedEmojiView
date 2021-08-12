@@ -6,19 +6,12 @@
     android:layout_height="wrap_content"
     android:background="@drawable/bottomsheetbck">
 
-
-
-
-
-
-
     <ImageView
         android:id="@+id/closeButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="12dp"
-
+        android:layout_marginTop="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_12sdp"
         android:src="@drawable/ic_baseline_close_24"
         app:layout_constraintBottom_toTopOf="@id/heading"
         app:layout_constraintEnd_toEndOf="parent"
@@ -211,7 +204,9 @@
                 style="@style/CustomChipChoiceStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Something else" />
+                android:text="Something else"
+                app:chipStrokeColor="#E91E63"
+                app:chipStrokeWidth="1dp" />
 
         </com.google.android.material.chip.ChipGroup>
 
