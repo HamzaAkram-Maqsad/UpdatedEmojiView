@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="musterd">#F2AE1D</color>
+    <color name="blue">#176BE5</color>
+    <color name="otpBoxColor">#F7F7F7</color>
+    <color name="editTextColor">#F9F7F4</color>
+    <color name="hint_Text_Color">#B7B7B7</color>
+    <color name="backgroundColor">#40000000</color>
+    <color name="backgrounScreen">#E5E5E5</color>
 </resources>

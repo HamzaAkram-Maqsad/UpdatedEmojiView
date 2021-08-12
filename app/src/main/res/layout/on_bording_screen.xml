@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgrounScreen"
+        android:paddingBottom="@dimen/_8sdp">
+
+        <ImageView
+            android:id="@+id/onBordingLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:src="@drawable/on_boarding"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/maqsad_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/onBordingLogo" />
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Welcome to Maqsad"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintBottom_toBottomOf="@id/maqsad_logo"
+            app:layout_constraintEnd_toEndOf="@id/maqsad_logo"
+            app:layout_constraintStart_toStartOf="@id/maqsad_logo"
+            app:layout_constraintTop_toTopOf="@id/maqsad_logo"
+            app:layout_constraintVertical_bias="0.7" />
+
+        <TextView
+            android:id="@+id/subtitleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/poppins_light"
+            android:text="Maqsad is an educational app that delivers high quality academic lectures"
+            android:textColor="#2D2B2E"
+            app:layout_constraintEnd_toEndOf="@id/welcomeText"
+            app:layout_constraintStart_toStartOf="@id/welcomeText"
+            app:layout_constraintTop_toBottomOf="@id/welcomeText" />
+
+        <Button
+            android:id="@+id/signUp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_43sdp"
+            android:layout_marginTop="@dimen/_24sdp"
+            android:background="@drawable/rounded"
+            android:text="Sign Up"
+            app:layout_constraintWidth_percent="0.4"
+            app:backgroundTint="@color/musterd"
+            app:layout_constraintEnd_toStartOf="@id/signIn"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subtitleText" />
+
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/signUp"
+            app:layout_constraintEnd_toStartOf="@id/signIn"
+            app:layout_constraintStart_toEndOf="@id/signUp"
+            app:layout_constraintTop_toTopOf="@id/signUp"
+
+            />
+
+        <Button
+            android:id="@+id/signIn"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_43sdp"
+            android:background="@drawable/rounded"
+            android:text="Sign In"
+            app:layout_constraintWidth_percent="0.4"
+            app:backgroundTint="@color/blue"
+            app:layout_constraintBottom_toBottomOf="@id/signUp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/signUp"
+            app:layout_constraintTop_toTopOf="@id/signUp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
