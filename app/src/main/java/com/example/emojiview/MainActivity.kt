@@ -3,15 +3,38 @@ package com.example.emojiview
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
+import com.example.emojiview.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        findViewById<Button>(R.id.show).setOnClickListener {
-            val sheet = ItemListDialogFragment()
-            sheet.show(supportFragmentManager, "")
+        binding.show.setOnClickListener {
+            binding.customView.slideIt()
+        }
+        binding.customView.videoSettingsClickListener = object : VideoSettingsClickListener {
+            override fun onQualityClick() {
+                TODO("Not yet implemented")
+            }
+
+            override fun onPlaybackSpeedClick() {
+                TODO("Not yet implemented")
+            }
+
+            override fun onCaptionsClick() {
+                TODO("Not yet implemented")
+            }
+
+            override fun onReportClick() {
+                TODO("Not yet implemented")
+            }
+
         }
     }
+
+
 }

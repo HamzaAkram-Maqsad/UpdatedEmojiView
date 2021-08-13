@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
@@ -64,12 +65,12 @@
             android:layout_marginTop="@dimen/_24sdp"
             android:background="@drawable/rounded"
             android:text="Sign Up"
-            app:layout_constraintWidth_percent="0.4"
             app:backgroundTint="@color/musterd"
             app:layout_constraintEnd_toStartOf="@id/signIn"
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/subtitleText" />
+            app:layout_constraintTop_toBottomOf="@id/subtitleText"
+            app:layout_constraintWidth_percent="0.4" />
 
         <View
             android:layout_width="@dimen/_1sdp"
@@ -88,12 +89,12 @@
             android:layout_height="@dimen/_43sdp"
             android:background="@drawable/rounded"
             android:text="Sign In"
-            app:layout_constraintWidth_percent="0.4"
             app:backgroundTint="@color/blue"
             app:layout_constraintBottom_toBottomOf="@id/signUp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/signUp"
-            app:layout_constraintTop_toTopOf="@id/signUp" />
+            app:layout_constraintTop_toTopOf="@id/signUp"
+            app:layout_constraintWidth_percent="0.4" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
