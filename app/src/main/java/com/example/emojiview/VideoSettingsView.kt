@@ -18,6 +18,7 @@ interface VideoSettingsClickListener {
     fun onPlaybackSpeedClick()
     fun onCaptionsClick()
     fun onReportClick()
+
 }
 
 class VideoSettingsView @JvmOverloads constructor(
@@ -32,11 +33,15 @@ class VideoSettingsView @JvmOverloads constructor(
     private var moveUpOffset = 0f
     private var parentHeight: Int = 0
     private lateinit var mainRootView: View
+    private var blurView: BlurView? = null
     var dY: Float = 0f
     var yUpperLimit = 0f
     var yLowerLimit = 0f
 
     var currentlyVisible = false
+    fun setBlurView(blurView: BlurView) {
+        this.blurView = blurView
+    }
 //    private val show: Boolean
 
     private var binding =
@@ -51,6 +56,7 @@ class VideoSettingsView @JvmOverloads constructor(
         setContentPadding(0, 0, 0, 0)
         clipToPadding = true
         clipChildren = true
+
     }
 
 
@@ -62,10 +68,10 @@ class VideoSettingsView @JvmOverloads constructor(
             parentHeight.toFloat() - this.height.toFloat()
         mainRootView = this
         yUpperLimit = moveUpOffset
-        yLowerLimit = parentHeight.toFloat() - (parentHeight * 10 / 100).toFloat()
+        // yLowerLimit = parentHeight.toFloat() - (parentHeight * 10 / 100).toFloat()
         if (currentlyVisible) {
             this.visibility = View.VISIBLE
-            this.y = parentHeight.toFloat()+20f
+            this.y = moveUpOffset
         } else {
             this.visibility = View.INVISIBLE
             this.y = parentHeight.toFloat()
@@ -90,6 +96,7 @@ class VideoSettingsView @JvmOverloads constructor(
             videoSettingsClickListener?.onCaptionsClick()
             slideIt()
         }
+
 
     }
 
@@ -140,7 +147,7 @@ class VideoSettingsView @JvmOverloads constructor(
 
                 override fun onAnimationEnd(animation: Animator?) {
                     Log.e("animations", "Ended")
-                    // blurView?.makeVisible()
+                    blurView?.visibility = View.VISIBLE
                 }
 
                 override fun onAnimationCancel(animation: Animator?) {
@@ -165,9 +172,9 @@ class VideoSettingsView @JvmOverloads constructor(
                 }
 
                 override fun onAnimationEnd(animation: Animator?) {
-                    this@VideoSettingsView.visibility = View.INVISIBLE
+                    mainRootView.visibility = View.INVISIBLE
                     currentlyVisible = false
-                    //blurView?.makeGone()
+                    blurView?.visibility = View.GONE
                 }
 
                 override fun onAnimationCancel(animation: Animator?) {

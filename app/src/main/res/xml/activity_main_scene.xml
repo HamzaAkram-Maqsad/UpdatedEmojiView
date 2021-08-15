@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="1000">
+       <KeyFrameSet>
+
+           <KeyAttribute
+               motion:motionTarget="@+id/myView"
+               motion:framePosition="50"
+               android:alpha="0.0" />
+           <KeyAttribute
+               motion:motionTarget="@+id/myView"
+               motion:framePosition="30"
+               android:scaleY="1.2" />
+           <KeyAttribute
+               motion:motionTarget="@+id/hide"
+               motion:framePosition="80"
+               android:scaleY="1.2" />
+           <KeyAttribute
+               motion:motionTarget="@+id/hide"
+               motion:framePosition="50"
+               android:alpha="0.5" />
+
+       </KeyFrameSet>
+        <OnSwipe
+            motion:touchAnchorId="@+id/myView"
+            motion:touchAnchorSide="bottom" />
+
+
+    </Transition>
+
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/myView"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone" />
+        <Constraint
+            android:id="@+id/subjectTabLayout"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            motion:layout_constraintTop_toBottomOf="@id/hide"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="@dimen/_16sdp" />
+        <Constraint
+            android:id="@+id/hide"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:visibility="visible"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@id/searchbox" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/start">
+
+
+
+    </ConstraintSet>
+
+
+</MotionScene>
