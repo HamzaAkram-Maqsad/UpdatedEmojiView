@@ -9,9 +9,11 @@
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/edittext_background.xml" value="0.1" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/ic_maths.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/ic_past_papers.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/ic_profile.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/ic_recent_play.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/ic_streaks.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/ic_video_lessons.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/on_boarding_illustration.xml" value="0.22" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/otp_box.xml" value="0.1" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/rounded.xml" value="0.19583333333333333" />
@@ -33,6 +35,7 @@
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/layout/siginup_screen.xml" value="0.1796875" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/layout/signin_screen.xml" value="0.22" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1796875" />
+        <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/xml/subject_card_animation_scene.xml" value="0.1796875" />
       </map>
     </option>
   </component>
