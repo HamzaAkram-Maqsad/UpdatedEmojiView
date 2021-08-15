@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,9 +16,7 @@
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.05"
-
-        />
+        app:layout_constraintVertical_bias="0.050000012" />
 
     <TextView
         android:id="@+id/heading"
@@ -138,12 +135,12 @@
         android:id="@+id/resendHalfText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
         android:layout_marginTop="@dimen/_32sdp"
         android:fontFamily="@font/poppins_medium"
         android:text="Didn’t receive any code?"
         android:textColor="@color/backgroundColor"
         android:textFontWeight="500"
-        android:layout_marginStart="@dimen/_16sdp"
         android:textSize="@dimen/_13ssp"
         app:layout_constraintBottom_toBottomOf="@id/resend"
         app:layout_constraintStart_toStartOf="@id/loginButton"
@@ -153,27 +150,26 @@
         android:id="@+id/resend"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_16sdp"
         android:fontFamily="@font/poppins_medium"
         android:text=" Resend"
         android:textColor="@color/cardBackground1"
         android:textFontWeight="500"
         android:textSize="@dimen/_13ssp"
-        app:layout_constraintTop_toTopOf="@id/resendHalfText"
-        app:layout_constraintStart_toEndOf="@id/resendHalfText"
         app:layout_constraintEnd_toEndOf="@id/loginButton"
-        android:layout_marginEnd="@dimen/_16sdp"
-         />
+        app:layout_constraintStart_toEndOf="@id/resendHalfText"
+        app:layout_constraintTop_toTopOf="@id/resendHalfText" />
 
     <TextView
         android:id="@+id/emailHalfText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_16sdp"
         android:layout_marginTop="@dimen/_12sdp"
         android:fontFamily="@font/poppins_medium"
         android:text="Didn’t receive any code?"
         android:textColor="@color/backgroundColor"
         android:textFontWeight="500"
-        android:layout_marginStart="@dimen/_16sdp"
         android:textSize="@dimen/_12ssp"
         app:layout_constraintBottom_toBottomOf="@id/email"
         app:layout_constraintStart_toStartOf="@id/resendHalfText"
@@ -183,15 +179,14 @@
         android:id="@+id/email"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:fontFamily="@font/poppins_medium"
         android:text=" Email"
         android:textColor="@color/cardBackground1"
         android:textFontWeight="500"
         android:textSize="@dimen/_12ssp"
-        app:layout_constraintTop_toTopOf="@id/emailHalfText"
-        app:layout_constraintStart_toEndOf="@id/emailHalfText"
         app:layout_constraintEnd_toEndOf="@id/resend"
-        android:layout_marginEnd="@dimen/_20sdp"
-        />
+        app:layout_constraintStart_toEndOf="@id/emailHalfText"
+        app:layout_constraintTop_toTopOf="@id/emailHalfText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

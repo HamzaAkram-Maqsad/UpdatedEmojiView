@@ -15,7 +15,10 @@
     <color name="whatsappColor">#00B950</color>
 
     <color name="colorPrimary">#F2AE1C</color>
-    <color name="backgroundColor">#FBFCFD</color>
+    <color name="secondaryColor">#176BE5</color>
+    <color name="tertiaryColor">#F27781</color>
+    <color name="fourthColor">#111095</color>
+    <color name="backgroundColor">#E5E5E5</color>
     <color name="backgroundColorWithOpacity">#B3FBFCFD</color>
     <color name="colorPrimaryWithOpacity">#CCF2AE1C</color>
     <color name="colorAccentSecondary">#FF000000</color>
@@ -23,7 +26,6 @@
     <color name="colorAccent">#F27781</color>
     <color name="colorAccentPrimaryWithOpacity">#B3F6F6F6</color>
     <color name="whiteWithOpacity">#B3FFFFFF</color>
-    <color name="secondaryColor">#F2AE1C</color>
     <color name="searchLayoutColor">#F0F2FC</color>
     <color name="secondaryColorVariant">#F2AE1C</color>
     <color name="primaryTextColor">#F2AE1C</color>
@@ -33,6 +35,5 @@
     <color name="tertiaryTextColor">#000000</color>
     <color name="tertiaryTextColor_opposite">#F6F6F6</color>
     <color name="lightColor">#6A6A6A</color>
-    <color name="tertiaryColor">#05046A</color>
 
 </resources>

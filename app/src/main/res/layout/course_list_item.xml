@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="@dimen/_15sdp"
+    android:background="@color/backgroundColor">
+
+    <ProgressBar
+        android:id="@+id/courseProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@drawable/course_progress_bar_background"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="88"
+        android:progressDrawable="@drawable/course_progress_drawable"
+        android:progressTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/courseImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_maths"
+        app:layout_constraintBottom_toBottomOf="@+id/courseProgressBar"
+        app:layout_constraintEnd_toEndOf="@+id/courseProgressBar"
+        app:layout_constraintStart_toStartOf="@+id/courseProgressBar"
+        app:layout_constraintTop_toTopOf="@+id/courseProgressBar"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/courseTitle"
+        style="@style/tertiaryTextBoldSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:text="O-Level\nMaths"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseProgressBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
