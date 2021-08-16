@@ -12,7 +12,9 @@
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/course_progress_bar_background.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/course_progress_drawable.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/edittext_background.xml" value="0.1" />
+        <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/ic_back.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/ic_baseline_play_arrow.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/ic_baseline_search.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/ic_hours.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/ic_hours_8.xml" value="0.19583333333333333" />
@@ -27,9 +29,11 @@
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/on_boarding_illustration.xml" value="0.22" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/otp_box.xml" value="0.1" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/rounded.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/topic_progress_background.xml" value="0.19583333333333333" />
+        <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/topic_progress_drawable.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/drawable/white_bck.xml" value="0.19583333333333333" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/layout/activity_dashboard.xml" value="0.1796875" />
-        <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/layout/activity_home.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/layout/activity_home.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/layout/activity_main.xml" value="0.1796875" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/layout/activity_subject.xml" value="0.1" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/layout/course_list_item.xml" value="0.6" />
@@ -47,9 +51,10 @@
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/layout/sample_collapsing_animation.xml" value="0.22" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/layout/siginup_screen.xml" value="0.1796875" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/layout/signin_screen.xml" value="0.22" />
-        <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/layout/subject_list_item.xml" value="0.1796875" />
+        <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/layout/subject_list_item.xml" value="0.7263157894736842" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/layout/video_list_item.xml" value="0.1796875" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1796875" />
+        <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/menu/course_appbar_menu.xml" value="0.1796875" />
         <entry key="..\:/Users/ge/AndroidStudioProjects/EmojiView/app/src/main/res/xml/subject_card_animation_scene.xml" value="0.1796875" />
       </map>
     </option>

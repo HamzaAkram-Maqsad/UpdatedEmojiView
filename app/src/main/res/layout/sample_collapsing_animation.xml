@@ -7,19 +7,44 @@
     android:background="@color/backgroundColor"
     app:layoutDescription="@xml/sample_collapsing_animation_scene">
 
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_5sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/backButton"
+                style="@style/tertiaryTextMediumMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="@dimen/_3sdp"
+                android:text="@string/back"
+                android:textColor="#808080"
+                android:textSize="@dimen/_13ssp"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
     <androidx.cardview.widget.CardView
         android:id="@+id/subjectCard"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_180sdp"
-        app:cardBackgroundColor="@color/cardBackground1"
-        app:cardCornerRadius="@dimen/_12sdp"
-        app:layout_constrainedHeight="true"
-        app:layout_constrainedWidth="true"
-        app:layout_constraintBottom_toBottomOf="@id/guideline_toolbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_scrollFlags="scroll" />
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="@dimen/_12sdp" />
 
     <TextView
         android:id="@+id/mainCourseItemTitle"
@@ -121,7 +146,7 @@
         app:layout_constraintBottom_toTopOf="@id/totalLessons"
         app:layout_constraintEnd_toEndOf="@id/subjectCard"
         app:layout_constraintStart_toStartOf="@id/subjectCard"
-        app:trackColor="#1444DD"
+        app:trackColor="@color/colorPrimaryDark"
         app:trackCornerRadius="@dimen/_5sdp"
         app:trackThickness="@dimen/_6sdp" />
 
@@ -142,7 +167,7 @@
         app:layout_constraintStart_toEndOf="@id/mainCourseItemTitle"
         app:layout_constraintTop_toTopOf="@id/subjectCard"
         app:layout_constraintVertical_bias="0.35"
-        app:trackColor="#1444DD"
+        app:trackColor="@color/colorPrimaryDark"
         app:trackCornerRadius="@dimen/_5sdp"
         app:trackThickness="@dimen/_4sdp" />
 
@@ -230,15 +255,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="@dimen/_170sdp" />
+        app:layout_constraintGuide_begin="@dimen/_205sdp" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="@dimen/_5sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/guideline_toolbar" />
+        app:layout_constraintTop_toBottomOf="@id/guideline_toolbar"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextColor="#808080" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"

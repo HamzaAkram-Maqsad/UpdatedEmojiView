@@ -3,11 +3,13 @@ package com.example.emojiview
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.motion.widget.MotionLayout
-import androidx.core.content.ContextCompat
+import androidx.appcompat.widget.SearchView
 import com.example.emojiview.databinding.SampleCollapsingAnimationBinding
-import com.example.emojiview.fragments.*
+import com.example.emojiview.fragments.PastPapersFragment
+import com.example.emojiview.fragments.PracticeFragment
+import com.example.emojiview.fragments.VideosFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,8 +19,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = SampleCollapsingAnimationBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        setSupportActionBar(binding.toolbar)
         changeStatusBarColor()
         setViewPager()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.course_appbar_menu, menu)
+        val menuItem = menu?.findItem(R.id.searchIcon)
+        val searchView = menuItem?.actionView as SearchView
+        searchView.queryHint = "Type here to search"
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                Log.e("submitted", query.toString())
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                Log.e("Text changed", newText.toString())
+                return false
+            }
+
+        })
+        return super.onCreateOptionsMenu(menu)
     }
 
     @SuppressLint("InflateParams")
