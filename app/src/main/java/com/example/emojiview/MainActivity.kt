@@ -2,9 +2,11 @@ package com.example.emojiview
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.motion.widget.MotionLayout
+import androidx.core.content.ContextCompat
 import androidx.viewpager.widget.ViewPager
-import com.example.emojiview.databinding.ActivityDashboardBinding
 import com.example.emojiview.databinding.SampleCollapsingAnimationBinding
 import com.example.emojiview.fragments.BookmarksFragment
 import com.example.emojiview.fragments.HomeFragment
@@ -20,8 +22,55 @@ class MainActivity : AppCompatActivity() {
         binding = SampleCollapsingAnimationBinding.inflate(layoutInflater)
         setContentView(binding.root)
         changeStatusBarColor()
-
         setViewPager()
+        binding.transitionLayout.setTransitionListener(object : MotionLayout.TransitionListener {
+            override fun onTransitionStarted(
+                motionLayout: MotionLayout?,
+                startId: Int,
+                endId: Int
+            ) {
+
+            }
+
+            override fun onTransitionChange(
+                motionLayout: MotionLayout?,
+                startId: Int,
+                endId: Int,
+                progress: Float
+            ) {
+            }
+
+            override fun onTransitionCompleted(motionLayout: MotionLayout?, currentId: Int) {
+                val drawable = when (currentId) {
+                    R.id.end -> {
+                        Log.e("end", "end")
+                        ContextCompat.getDrawable(this@MainActivity, R.drawable.ic_hours_10)
+                    }
+                    else -> {
+                        ContextCompat.getDrawable(
+                            this@MainActivity,
+                            android.R.drawable.screen_background_light_transparent
+                        )
+                    }
+                }
+//                drawable?.setBounds(0, 0,resources.getDimension(R.dimen._1sdp).toInt(),0)
+                binding.courseProgress.setCompoundDrawables(
+                    drawable,
+                    null,
+                    null,
+                    null
+                )
+            }
+
+            override fun onTransitionTrigger(
+                motionLayout: MotionLayout?,
+                triggerId: Int,
+                positive: Boolean,
+                progress: Float
+            ) {
+            }
+
+        })
     }
 
 

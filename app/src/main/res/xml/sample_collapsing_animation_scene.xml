@@ -5,8 +5,7 @@
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
-        motion:duration="500"
-        motion:motionInterpolator="linear">
+        motion:motionInterpolator="easeInOut">
         <OnSwipe
             motion:dragDirection="dragUp"
             motion:touchAnchorId="@id/viewpager"
@@ -22,7 +21,7 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_20sdp"
             android:layout_marginBottom="@dimen/_10sdp"
-            android:elevation="@dimen/_10sdp"
+            android:elevation="@dimen/_5sdp"
             motion:layout_constraintBottom_toTopOf="@id/guideline_toolbar"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
@@ -38,42 +37,42 @@
             motion:layout_constraintStart_toStartOf="@id/subjectCard"
             motion:layout_constraintTop_toTopOf="@id/subjectCard"
             motion:layout_constraintVertical_bias="0" />
-        <Constraint
-            android:id="@id/courseProgress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="@dimen/_15sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:elevation="@dimen/_30sdp"
-            motion:layout_constrainedWidth="true"
-            motion:layout_constraintBottom_toTopOf="@id/subjectProgressIndicator"
-            motion:layout_constraintStart_toStartOf="@id/subjectCard"
-            motion:layout_constraintTop_toBottomOf="@id/mainCourseItemTitle" >
+<!--        <Constraint-->
+<!--            android:id="@id/courseProgress"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/_20sdp"-->
+<!--            android:layout_marginTop="0dp"-->
+<!--            android:layout_marginEnd="@dimen/_15sdp"-->
+<!--            android:layout_marginBottom="@dimen/_5sdp"-->
+<!--            android:elevation="@dimen/_30sdp"-->
+<!--            motion:layout_constrainedWidth="true"-->
+<!--            motion:layout_constraintBottom_toTopOf="@id/subjectProgressIndicator"-->
+<!--            motion:layout_constraintStart_toStartOf="@id/subjectCard"-->
+<!--            motion:layout_constraintTop_toBottomOf="@id/mainCourseItemTitle">-->
 
-            <CustomAttribute
-                motion:attributeName="textSize"
-                motion:customDimension="@dimen/_5ssp" />
-        </Constraint>
+<!--            <CustomAttribute-->
+<!--                motion:attributeName="textSize"-->
+<!--                motion:customDimension="@dimen/_6ssp" />-->
+<!--        </Constraint>-->
 
-        <Constraint
-            android:id="@id/subjectProgressIndicator"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:layout_marginEnd="@dimen/_20sdp"
-            android:layout_marginBottom="@dimen/_12sdp"
-            android:elevation="@dimen/_30sdp"
-            motion:layout_constrainedWidth="true"
-            motion:layout_constraintBottom_toTopOf="@id/totalLessons"
-            motion:layout_constraintEnd_toEndOf="@id/subjectCard"
-            motion:layout_constraintStart_toStartOf="@id/subjectCard">
+<!--        <Constraint-->
+<!--            android:id="@id/subjectProgressIndicator"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/_20sdp"-->
+<!--            android:layout_marginEnd="@dimen/_20sdp"-->
+<!--            android:layout_marginBottom="@dimen/_12sdp"-->
+<!--            android:elevation="@dimen/_30sdp"-->
+<!--            motion:layout_constrainedWidth="true"-->
+<!--            motion:layout_constraintBottom_toTopOf="@id/totalLessons"-->
+<!--            motion:layout_constraintEnd_toEndOf="@id/subjectCard"-->
+<!--            motion:layout_constraintStart_toStartOf="@id/subjectCard">-->
 
-            <CustomAttribute
-                motion:attributeName="TrackThickness"
-                motion:customPixelDimension="@dimen/_6sdp" />
-        </Constraint>
+<!--            <CustomAttribute-->
+<!--                motion:attributeName="TrackThickness"-->
+<!--                motion:customIntegerValue="@integer/expandedProgressBarHeight" />-->
+<!--        </Constraint>-->
         <!--        <Constraint android:id="@id/mainCourseItemTitle">-->
         <!--            <CustomAttribute-->
         <!--                motion:attributeName="textSize"-->
@@ -89,6 +88,16 @@
         <!--			motion:layout_constraintStart_toEndOf="@id/navigation_icon"-->
         <!--			motion:layout_constraintTop_toTopOf="@id/navigation_icon" />-->
 
+        <Constraint android:id="@id/courseProgressCollapsed">
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="0" />
+        </Constraint>
+        <Constraint android:id="@id/subjectProgressIndicatorCollapsed">
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="0" />
+        </Constraint>
         <Constraint android:id="@id/totalLessons">
             <CustomAttribute
                 motion:attributeName="alpha"
@@ -107,6 +116,12 @@
                 motion:customFloatValue="1" />
         </Constraint>
 
+        <Constraint android:id="@id/subjectProgressIndicator">
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="1" />
+        </Constraint>
+
         <Constraint android:id="@id/pastPapers">
             <CustomAttribute
                 motion:attributeName="alpha"
@@ -114,6 +129,11 @@
         </Constraint>
 
         <Constraint android:id="@id/courseHours">
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="1" />
+        </Constraint>
+        <Constraint android:id="@id/courseProgress">
             <CustomAttribute
                 motion:attributeName="alpha"
                 motion:customFloatValue="1" />
@@ -136,7 +156,7 @@
             android:layout_marginTop="@dimen/_10sdp"
             android:layout_marginEnd="@dimen/_20sdp"
             android:layout_marginBottom="@dimen/_10sdp"
-            android:elevation="@dimen/_10sdp"
+            android:elevation="@dimen/_5sdp"
             motion:layout_constraintBottom_toTopOf="@id/guideline_toolbar"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
@@ -155,44 +175,44 @@
             motion:layout_constraintTop_toTopOf="@id/subjectCard"
             motion:layout_constraintVertical_bias="0.5" />
 
-        <Constraint
-            android:id="@id/subjectProgressIndicator"
-            android:layout_width="@dimen/_70sdp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/_1sdp"
-            android:layout_marginEnd="@dimen/_15sdp"
-            android:layout_marginBottom="0dp"
-            android:elevation="@dimen/_30sdp"
-            motion:layout_constraintBottom_toBottomOf="@id/subjectCard"
-            motion:layout_constraintEnd_toEndOf="@id/subjectCard"
-            motion:layout_constraintHorizontal_bias="1"
-            motion:layout_constraintStart_toEndOf="@id/mainCourseItemTitle"
-            motion:layout_constraintTop_toTopOf="@id/subjectCard"
-            motion:layout_constraintVertical_bias="0.35">
+<!--        <Constraint-->
+<!--            android:id="@id/subjectProgressIndicator"-->
+<!--            android:layout_width="@dimen/_70sdp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="@dimen/_1sdp"-->
+<!--            android:layout_marginEnd="@dimen/_15sdp"-->
+<!--            android:layout_marginBottom="0dp"-->
+<!--            android:elevation="@dimen/_30sdp"-->
+<!--            motion:layout_constraintBottom_toBottomOf="@id/subjectCard"-->
+<!--            motion:layout_constraintEnd_toEndOf="@id/subjectCard"-->
+<!--            motion:layout_constraintHorizontal_bias="1"-->
+<!--            motion:layout_constraintStart_toEndOf="@id/mainCourseItemTitle"-->
+<!--            motion:layout_constraintTop_toTopOf="@id/subjectCard"-->
+<!--            motion:layout_constraintVertical_bias="0.35">-->
 
-            <CustomAttribute
-                motion:attributeName="TrackThickness"
-                motion:customPixelDimension="@dimen/_1sdp" />
-        </Constraint>
+<!--            <CustomAttribute-->
+<!--                motion:attributeName="TrackThickness"-->
+<!--                motion:customIntegerValue="@integer/collapsedProgressBarHeight" />-->
+<!--        </Constraint>-->
 
-        <Constraint
-            android:id="@id/courseProgress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="@dimen/_2sdp"
-            android:layout_marginEnd="@dimen/_15sdp"
-            android:layout_marginBottom="@dimen/_5sdp"
-            android:elevation="@dimen/_30sdp"
-            motion:layout_constrainedWidth="true"
-            motion:layout_constraintBottom_toBottomOf="@id/subjectCard"
-            motion:layout_constraintEnd_toEndOf="@id/subjectCard"
-            motion:layout_constraintTop_toBottomOf="@id/subjectProgressIndicator" >
+<!--        <Constraint-->
+<!--            android:id="@id/courseProgress"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="0dp"-->
+<!--            android:layout_marginTop="@dimen/_2sdp"-->
+<!--            android:layout_marginEnd="@dimen/_15sdp"-->
+<!--            android:layout_marginBottom="@dimen/_5sdp"-->
+<!--            android:elevation="@dimen/_30sdp"-->
+<!--            motion:layout_constrainedWidth="true"-->
+<!--            motion:layout_constraintBottom_toBottomOf="@id/subjectCard"-->
+<!--            motion:layout_constraintEnd_toEndOf="@id/subjectCard"-->
+<!--            motion:layout_constraintTop_toBottomOf="@id/subjectProgressIndicator">-->
 
-            <CustomAttribute
-                motion:attributeName="textSize"
-                motion:customDimension="@dimen/_3ssp" />
-        </Constraint>
+<!--            <CustomAttribute-->
+<!--                motion:attributeName="textSize"-->
+<!--                motion:customDimension="@dimen/_4ssp" />-->
+<!--        </Constraint>-->
         <Constraint
             android:id="@+id/guideline_toolbar"
             android:layout_width="wrap_content"
@@ -200,6 +220,16 @@
             motion:layout_constraintGuide_begin="@dimen/_60sdp" />
 
 
+        <Constraint android:id="@id/courseProgressCollapsed">
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="1" />
+        </Constraint>
+        <Constraint android:id="@id/subjectProgressIndicatorCollapsed">
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="1" />
+        </Constraint>
         <Constraint android:id="@id/totalLessons">
             <CustomAttribute
                 motion:attributeName="alpha"
@@ -207,6 +237,17 @@
         </Constraint>
 
 
+        <Constraint android:id="@id/courseProgress">
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="0" />
+        </Constraint>
+
+        <Constraint android:id="@id/subjectProgressIndicator">
+            <CustomAttribute
+                motion:attributeName="alpha"
+                motion:customFloatValue="0" />
+        </Constraint>
         <Constraint android:id="@id/totalChapters">
             <CustomAttribute
                 motion:attributeName="alpha"
